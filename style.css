@@ -1,0 +1,303 @@
+/* h1,logo,(img/svg),heart,chat mei inline css */
+/* hover joda hai in sab mei-sidebar mei elements mei ,stories. */
+
+body,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.homebar {
+  color: rgb(236, 84, 33);
+  text-shadow: 2px 2px 2px rgb(237, 176, 185);
+}
+li {
+  transition: all 0.2s ease-in-out;
+  font-size: 30px;
+}
+
+li:hover {
+  background-color: rgb(205, 202, 203);
+  border-radius: 11%;
+  transform: scale(1.2);
+}
+
+/* .shadow{
+ text-shadow: 10vh 10vh 10vh rgb(212, 79, 101) ; */
+/* } */
+/* sab mei apply */
+body {
+  font-family: New Amsterdam;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150vh;
+}
+
+/* sidebar aur main */
+.container {
+  display: flex;
+  width: 1200px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 140vh;
+}
+
+.sidebar {
+  background-color: rgba(236, 233, 233, 0.989);
+  padding: 15px;
+  width: 320px;
+  border-right: 1px solid rgb(232, 228, 228);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-style: bold;
+}
+
+.DP img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  justify-content: center;
+  justify-self: center;
+  transform: translateX(-50%);
+}
+
+.DP h2,
+.DP p {
+  text-align: center;
+  margin: 5px;
+}
+
+.fame {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul {
+  width: 100%;
+}
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(69, 69, 69);
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  transition: background 0.3s;
+}
+nav ul li a:hover {
+  background-color: rgb(236, 236, 236);
+  border-radius: 8px;
+}
+
+::selection {
+  background-color: rgb(137, 168, 254);
+}
+
+/* main saman */
+.main-saman {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.911);
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 14px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid rgb(203, 203, 203);
+  border-radius: 8px;
+  background-image: url(assets/Icon\ 2.svg);
+  background-repeat: no-repeat;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.search-bar input:hover {
+  transform: scale(1.1);
+}
+
+.icons button {
+  padding: 10px 15px;
+  background-color: rgb(253, 62, 62);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: grab;
+  transform: translateY(0.82vw);
+}
+.icons img {
+  transform: translateX(-2vw);
+}
+
+.icons button:hover {
+  background-color: rgba(255, 0, 0, 0.975);
+}
+
+/* storiyan styling */
+.storiyan {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.story:hover {
+  transform: scale(1.25);
+}
+.story img {
+  border-radius: 50%;
+}
+
+/* feeds style marte hue*/
+/* grid****** */
+
+.feed {
+  display: grid;
+  grid-template-columns: 49vh 49vh 49vh;
+  grid-template-rows: 49vh 60vh;
+  gap: 10px;
+}
+
+.post {
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.post img {
+  object-fit: fill;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.post-details {
+  padding: 10px 0;
+}
+/* post edits */
+.post1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.post2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.post3 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+.post4 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.post5 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  transform: translateY(-7vw);
+}
+.post6 {
+  grid-row: 2/3;
+  grid-column: 3/4;
+  transform: translateY(6.2vw);
+}
+
+/* bna diya responsive ;) */
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 3px solid rgb(243, 240, 240);
+    justify-self: center;
+    transform: translateX(
+      20vh
+    ); /* is transform ki badolat phone pe khola toh slidebar center pe*/
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
+/* media  khtam */
+.homebar {
+  padding: 12px;
+  margin: 12px;
+}
+.shadow {
+  padding: 12px;
+}
+.s1 {
+  padding: 40px;
+}
+span {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fontstyle {
+  font-family: New Amsterdam;
+  font-weight: 200;
+  font-size: 25px;
+}
+.chat {
+  padding-right: 15px;
+}
+.heart {
+  padding-right: 15px;
+}
+
+.username {
+  font-size: 33px;
+  transition: all 0.2s ease-in-out;
+}
+.username:hover {
+  transform: scale(1.2);
+  background-color: rgb(206, 203, 203);
+  border-radius: 20%;
+}
+.end {
+  transform: translateX(26vh);
+}
+.noofpost {
+  transition: all 0.2s ease-in-out;
+}
+.noofpost:hover {
+  transform: scale(1.2);
+  background-color: rgb(206, 203, 203);
+  border-radius: 20%;
+}
+/* pretteir se pretty bna diya :) */
+/* namaste sirji i tried my best */
+/* Thanks a lot sir for wonderful spark classes   :)  <3   */
